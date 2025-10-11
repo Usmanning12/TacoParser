@@ -5,7 +5,6 @@ namespace LoggingKata
     {
         public TacoBell()
         {
-            throw new NotImplementedException();
         }
         
         public string Name { get; set; } 
