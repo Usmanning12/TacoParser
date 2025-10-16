@@ -40,6 +40,16 @@ namespace LoggingKata.Test
 
 
         //TODO: Create a test called ShouldParseLatitude
+        public void ShouldParseLatitude(string line, double expected)
+        {
+           //Arrange//
+            var tacoBell = new TacoParser();
+            //Act//
+            var actual = tacoBell.Parse(line);
+            //Assert//
+            Assert.Equal( expected, actual.Location.Latitude);
+        }
+        
 
     }
 }
