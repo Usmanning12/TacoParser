@@ -1,4 +1,7 @@
-﻿namespace LoggingKata
+﻿using System;
+using LoggingKata;
+
+namespace LoggingKata
 {
     /// <summary>
     /// Parses a POI file to locate all the Taco Bells
@@ -35,7 +38,7 @@
             
             
             // Done: Grab the name from your array at index 2
-            var Name = cells[2];
+            var name = cells[2];
             
 
             // Done: Create a TacoBell class
@@ -46,13 +49,18 @@
             // Done: Set the values of the point correctly (Latitude and Longitude) 
 
             // Done : Create an instance of the TacoBell class
-            var point = new Point();
+            var point = new Point(); 
             point.Latitude = tacoLatitude;
             point.Longitude = tacoLongitude;
             
-            var tacoBell = new TacoBell();
-            tacoBell.Name = Name;
-            tacoBell.Location = point; 
+            
+
+            var tacoBell = new TacoBell()
+            {
+                Name = name,
+                Location = point
+            };
+            
             // Done : Set the values of the class correctly (Name and Location)
 
             // Done : Then, return the instance of your TacoBell class,
@@ -60,5 +68,7 @@
 
             return tacoBell;
         }
+
+        
     }
 }

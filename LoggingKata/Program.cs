@@ -29,9 +29,6 @@ namespace LoggingKata
             {
                 logger.LogError("file only has one line of input data");
             }
-            
-            logger.LogInfo($"Lines: {lines[0]}");
-
             // This will display the first item in your lines array
             logger.LogInfo($"Lines: {lines[0]}");
 
@@ -63,12 +60,12 @@ namespace LoggingKata
                     var corA = new GeoCoordinate();
                     corA.Latitude = locA.Location.Latitude;
                     corA.Longitude = locA.Location.Longitude;
-                    
-                    
+
+
 
                     for (int j = 0; j < locations.Length; j++)
                     {
-                        var locB = locations [j];
+                        var locB = locations[j];
                         var corB = new GeoCoordinate();
                         corB.Latitude = locB.Location.Latitude;
                         corB.Longitude = locB.Location.Longitude;
@@ -78,10 +75,11 @@ namespace LoggingKata
                             distance = corA.GetDistanceTo(corB);
                             tacoBell = locA;
                             tacoBell2 = locB;
-                            logger.LogInfo($"{tacoBell.Name} and {tacoBell2.Name} are {distance} farthest apart");
+
                         }
                     }
                 }
+                logger.LogInfo($"{tacoBell.Name} and {tacoBell2.Name} are {distance} farthest apart");
                 // This loop will let you select one location at a time to act as the "starting point" or "origin" location.
                 // Naming suggestion for variable: `locA`
 

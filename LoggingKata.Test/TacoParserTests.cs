@@ -21,6 +21,9 @@ namespace LoggingKata.Test
 
         [Theory]
         [InlineData("34.073638, -84.677017, Taco Bell Acwort...", -84.677017)]
+        [InlineData("34.376395,-84.913185,Taco Bell Adairsvill.", -84.913185)]
+        [InlineData("33.22997,-86.805275,Taco Bell Alabaste...", -84.805275)]
+        [InlineData("31.570771,-84.10353,Taco Bell Albany...", -84.10353)]
         //Add additional inline data. Refer to your CSV file.
         public void ShouldParseLongitude(string line, double expected)
         {
