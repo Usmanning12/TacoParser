@@ -26,13 +26,13 @@ namespace LoggingKata
             }
 
             // Done: Grab the latitude from your array at index 0
-            var tacoLongitude = double.Parse(cells[0]);
+            var tacoLatitude = double.Parse(cells[0]);
             // You're going to need to parse your string as a `double`
             // which is similar to parsing a string as an `int`
             
             
             // Done: Grab the longitude from your array at index 1
-            var tacoLatitude = double.Parse(cells[1]);
+            var tacoLongitude = double.Parse(cells[1]);
             // You're going to need to parse your string as a `double`
             // which is similar to parsing a string as an `int`
             
@@ -49,9 +49,12 @@ namespace LoggingKata
             // Done: Set the values of the point correctly (Latitude and Longitude) 
 
             // Done : Create an instance of the TacoBell class
-            var point = new Point(); 
-            point.Latitude = tacoLatitude;
-            point.Longitude = tacoLongitude;
+            var point = new Point();
+            {
+                point.Latitude = tacoLatitude;
+                point.Longitude = tacoLongitude;
+            }
+            
             
             
 
